@@ -9,41 +9,64 @@
 </head>
 <body>
     <section class="card">
-        <form action="">
-           <h1>Sign Up</h1>
-           <label for="name">Name:</label>
-           <input type="text" id="name" name="user_name">
-           <br>
-           <label for="email">Prenom : </label><input type="text" id="Prenom" name="user_prenom"><br>
-           <label for="tel">Tel : </label><input type="text" id="tel" name="tel"><br>
-           <label for="email">Email : </label><input type="text" id="email" name="email"><br>
-           <label for="Gender">Gender : </label>
-           <input type="radio" id="male" name="female" value="male">
-           <label for="front_end">Male</label>
-           <input type="radio" id="back_end" name="female" value="female">
-           <label for="back_end">Female</label><br>
-           <label for="Group">Group : </label> <select id="Group" name="Group">
-            <optgroup label="Web">
-              <option value="DW101">DW101</option>
-              <option value="DW102">DW102</option>
-              <option value="DW103">DW103</option>
-            </optgroup>
-            <optgroup label="Mobile">
-              <option value="DM101">DM101</option>
-              <option value="DM102">DM102</option>
-            </optgroup>
-          </select><br>
-          <label for="Group">Clubs  : </label> <select id="Group" name="Group">
-            <optgroup label="Choose a Club">
-              <option value="Informatique">Informatique</option>
-              <option value="Robotique">Robotique</option>
-              <option value="jeu d'echecs">Jeu d'échecs </option>
-              <option value="Musique">Musique</option>
-              <option value="Foot">Foot</option>
-              <option value="Théatre">Théatre</option>
-            </optgroup>
-          </select>
+      <div class="title">Registration</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Prénom</span>
+              <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Nom</span>
+              <input type="text" placeholder="Enter your username" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Télephone</span>
+              <input type="text" placeholder="Enter your number" required>
+            </div>
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Not sure ?</span>
+            </label>
+            </div>
+            <span class="gender-title" for="input-box">Group</span>
+            <select id="GroupSel" name="Group" required>
+              <optgroup label="Web">
+                <option value="DW101">DW101</option>
+                <option value="DW102">DW102</option>
+                <option value="DW103">DW103</option>
+              </optgroup>
+              <optgroup label="Mobile">
+                <option value="DM101">DM101</option>
+                <option value="DM102">DM102</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="button">
+            <input type="submit" value="Register">
+          </div>
         </form>
+      </div>
     </section>
 </body>
 </html>
