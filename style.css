@@ -19,6 +19,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
+    
   }
   .card {
     background-image: linear-gradient(to top, #881eb6 0%, #5054af 90%);
@@ -29,7 +30,6 @@
     border-radius: 6px;
     display: flex;
     color: rgb(255, 255, 255);
-    cursor: pointer;
     font-family: 'Raleway';
     flex-wrap: wrap;
     flex-direction: column;
@@ -166,10 +166,17 @@
      display: none;
    }
    #GroupSel{
-    display: flex;
-    align-items: center;
-    width: 30%;
-    ;
+    height: 45px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    cursor: pointer;
    }
    form .button{
      height: 45px;
@@ -191,22 +198,126 @@
    form .button input:hover{
     transform: scale(0.99);
     }
-   @media(max-width: 480px){
-   .card{
-    max-width: 100%;
-  }
-  form .user-details .input-box{
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    form .category{
-      width: 100%;
-    }
-    .content form .user-details{
-      max-height: 300px;
-      overflow-y: scroll;
-    }
-    .user-details::-webkit-scrollbar{
-      width: 5px;
-    }
-  }
+
+  /*multiple select*/
+  .container{
+    position: relative;
+    width: 50%;
+    margin-top: 1rem;
+}
+.select-btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.select-btn .btn-text{
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    transition: all 0.3s ease;
+}
+.select-btn .arrow-dwn{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    transition: all 0.3s ease;
+}
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg);
+    transition: all 0.3s ease;
+}
+.list-items{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: all 0.3s ease;
+}
+.select-btn.open ~ .list-items{
+    display: block;
+    transition: all 0.3s ease;
+}
+.list-items .item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.list-items .item:hover{
+    background-color: #e7edfe;
+    transition: all 0.3s ease;
+}
+.item .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    transition: all 0.3s ease;
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+    background-color: #4070f4;
+    border-color: #4070f4;
+    transition: all 0.3s ease;
+}
+.checkbox .check-icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+    transform: scale(1);
+    
+}
+@media(max-width: 480px){
+  .card{
+   max-width: 100%;
+ }
+ form .user-details .input-box{
+     margin-bottom: 15px;
+     width: 100%;
+   }
+   form .category{
+     width: 100%;
+   }
+   .content form .user-details{
+     max-height: 300px;
+     overflow-y: scroll;
+   }
+   .user-details::-webkit-scrollbar{
+     width: 5px;
+   }
+ }

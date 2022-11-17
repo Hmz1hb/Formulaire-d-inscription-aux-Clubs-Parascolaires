@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -49,7 +50,7 @@
               <span class="gender">Not sure ?</span>
             </label>
             </div>
-            <span class="gender-title" for="input-box">Group</span>
+            <span class="gender-title" for="input-box">Group</span><br>
             <select id="GroupSel" name="Group" required>
               <optgroup label="Web">
                 <option value="DW101">DW101</option>
@@ -61,6 +62,53 @@
                 <option value="DM102">DM102</option>
               </optgroup>
             </select>
+            <div class="container">
+              <span class="gender-title">Select a club</span>
+              <div class="select-btn">
+                  <span class="btn-text">Select Clubs</span>
+                  <span class="arrow-dwn">
+                      <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+              </div>
+              <ul class="list-items">
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Informatique</span>
+                  </li>
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Robotique</span>
+                  </li>
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Jeu d'echecs</span>
+                  </li>
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Music</span>
+                  </li>
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Foot</span>
+                  </li>
+                  <li class="item">
+                      <span class="checkbox">
+                          <i class="fa-solid fa-check check-icon"></i>
+                      </span>
+                      <span class="item-text">Theatre</span>
+                  </li>
+              </ul>
+          </div>
           </div>
           <div class="button">
             <input type="submit" value="Register">
@@ -68,5 +116,6 @@
         </form>
       </div>
     </section>
+    <script src="./java.js"></script>
 </body>
 </html>
