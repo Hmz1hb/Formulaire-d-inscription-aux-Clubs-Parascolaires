@@ -15,16 +15,17 @@
         <form action="#">
           <div class="user-details">
             <div class="input-box">
-              <span class="details">Prénom</span>
-              <input type="text" placeholder="Enter your name" required>
-            </div>
-            <div class="input-box">
-              <span class="details">Nom</span>
-              <input type="text" placeholder="Enter your username" required>
+              <span class="details"> Nom et Prénom</span>
+              <input placeholder="Type your name" required></input>
+              <div class="characters">
+                <span class="signal_num">0</span>
+                <span class="limit_num">/30</span>
+              </div>
             </div>
             <div class="input-box">
               <span class="details">Email</span>
-              <input type="text" placeholder="Enter your email" required>
+              <input class="input" type="text" placeholder="Enter your email">
+              <p class="text"></p>
             </div>
             <div class="input-box">
               <span class="details">Télephone</span>
@@ -52,6 +53,7 @@
             </div>
             <span class="gender-title" for="input-box">Group</span><br>
             <select id="GroupSel" name="Group" required>
+
               <optgroup label="Web">
                 <option value="DW101">DW101</option>
                 <option value="DW102">DW102</option>
