@@ -8,7 +8,9 @@
     --card-height: 90vh;
     --card-width: calc(var(--card-height) / 1.5);
   }
-  
+  *{
+    font-family: 'Raleway',sans-serif;
+  }
   
   body {
     min-height: 100vh;
@@ -115,7 +117,23 @@
     font-weight: 500;
     margin-bottom: 5px;
   }
-  .user-details .input-box input {
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: #9b59b6;
+  }
+  .input-box.error input{
+    border-color: red;
+  }
+  .input-box input::placeholder{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .input-box.error .characters{
+    color: red;
+    font-size: xx-large;
+    transition: 0.3s ease-in-out;
+  }
+  .user-details .input-box input, input {
     height: 45px;
     width: 100%;
     outline: none;
@@ -231,7 +249,7 @@
     color: #fff;
     font-size: 14px;
     border-radius: 50%;
-    background: #6e93f7;
+    background: #4072fc;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
