@@ -51,19 +51,37 @@
               <span class="gender">Not sure ?</span>
             </label>
             </div>
-            <span class="gender-title" for="input-box">Group</span><br>
-            <select id="GroupSel" name="Group" required>
-
-              <optgroup label="Web">
-                <option value="DW101">DW101</option>
-                <option value="DW102">DW102</option>
-                <option value="DW103">DW103</option>
-              </optgroup>
-              <optgroup label="Mobile">
-                <option value="DM101">DM101</option>
-                <option value="DM102">DM102</option>
-              </optgroup>
-            </select>
+          </div>
+          <div class="group-details">
+            <input type="radio" name="group" id="DW101">
+            <input type="radio" name="group" id="DW102">
+            <input type="radio" name="group" id="DW103">
+            <input type="radio" name="group" id="DM101">
+            <input type="radio" name="group" id="DM102">
+            <span class="group-title">Groups</span>
+            <div class="groupCat">
+              <label for="DW101">
+              <span class="group one"></span>
+              <span class="groups">DW101</span>
+            </label>
+            <label for="DW102">
+              <span class="group two"></span>
+              <span class="groups">DW102</span>
+            </label>
+            <label for="DW103">
+              <span class="group three"></span>
+              <span class="groups">DW103</span>
+            </label>
+            <label for="DM101">
+              <span class="group four"></span>
+              <span class="groups">DM101</span>
+            </label>
+            <label for="DM102">
+              <span class="group five"></span>
+              <span class="groups">DM102</span>
+            </label>
+            </div>
+      </div>
             <div class="container">
               <span class="gender-title">Select a club</span>
               <div class="select-btn">
@@ -110,7 +128,6 @@
                       <span class="item-text">Theatre</span>
                   </li>
               </ul>
-          </div>
           </div>
           <div class="button">
             <input type="submit" value="Register">

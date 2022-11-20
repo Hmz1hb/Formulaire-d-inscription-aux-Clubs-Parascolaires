@@ -18,7 +18,7 @@ textarea.addEventListener("keyup", ()=>{
   eInput = form.querySelector(".input"),
   text = form.querySelector(".text");
 
-  form.addEventListener("submit", (e)=>{
+  form.addEventListener("keyup", (e)=>{
     e.preventDefault(); //preventing form from submitting
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //Regex pattern to validate email
     form.classList.add("error");
@@ -32,6 +32,8 @@ textarea.addEventListener("keyup", ()=>{
       text.innerText = "This is a valid email";
     }
   });
+//phone number verification
+
 //Multi Select 
 const selectBtn = document.querySelector(".select-btn"),
       items = document.querySelectorAll(".item");
