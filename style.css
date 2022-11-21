@@ -121,18 +121,16 @@
   .input-box input:valid{
     border-color: #9b59b6;
   }
-  .input-box.error input{
-    border-color: red;
-  }
   .input-box input::placeholder{
     font-size: 15px;
     font-weight: 500;
   }
-  .input-box.error .characters{
+  .input-box.error .characters ,.input-box.error input{
     color: red;
-    font-size: xx-large;
+    font-size: large;
     transition: 0.3s ease-in-out;
   }
+
   .user-details .input-box input, input {
     height: 45px;
     width: 100%;
@@ -194,7 +192,7 @@
      height: 45px;
      margin: 35px 0
    }
-   form .button input{
+   form .button button{
      height: 100%;
      width: 100%;
      border-radius: 5px;
@@ -207,7 +205,7 @@
      transition: all 0.3s ease;
      background: linear-gradient(135deg, #71b7e6, #9b59b6);
    }
-   form .button input:hover{
+   form .button button:hover{
     transform: scale(0.99);
     }
 
