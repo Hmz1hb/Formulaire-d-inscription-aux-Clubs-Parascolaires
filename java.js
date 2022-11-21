@@ -85,5 +85,4 @@ items.forEach(item => {
     });
 })
 ///gender radio button verification
-
-
+wtf
