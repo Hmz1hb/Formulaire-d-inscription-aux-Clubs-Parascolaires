@@ -21,7 +21,6 @@ textarea.addEventListener("keyup", ()=>{
   const form = document.querySelector("form"),
   eInput = form.querySelector(".input"),
   text = form.querySelector(".text");
-  function tt(){
   form.addEventListener("keyup", (e)=>{
     e.preventDefault(); //preventing form from submitting
     let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //Regex pattern to validate email
@@ -43,9 +42,9 @@ textarea.addEventListener("keyup", ()=>{
       eInput.style.borderColor = "white";
 
     }
-  })};
+  });
 //phone number verification
-function validateNumber()
+function NumVer()
 {
     var num = document.getElementById("PhoneNum");
     var output = document.getElementById("PhoneError");
