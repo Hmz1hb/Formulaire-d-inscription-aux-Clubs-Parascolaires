@@ -16,7 +16,7 @@
           <div class="user-details">
             <div class="input-box">
               <span class="details"> Nom et Prénom</span>
-              <input placeholder="Type your name" required></input>
+              <input placeholder="Type your name"></input>
               <div class="characters">
                 <span class="signal_num">0</span>
                 <span class="limit_num">/30</span>
@@ -29,7 +29,8 @@
             </div>
             <div class="input-box">
               <span class="details">Télephone</span>
-              <input type="text" placeholder="Enter your number" required>
+              <input type="text" id="PhoneNum" placeholder="Enter your number" onkeyup="validateNumber()" >
+              <p id="PhoneError" class="error hidden"></p>
             </div>
           </div>
           <div class="gender-details">
@@ -130,7 +131,7 @@
               </ul>
           </div>
           <div class="button">
-            <input type="submit" value="Register">
+            <button id="submit"  type="submit" value="Register">Register</button>
           </div>
         </form>
       </div>
