@@ -78,6 +78,10 @@
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
   }
+  #VerImg{
+    display: flex;
+
+  }
   
   @keyframes spin {
     0% {
@@ -187,28 +191,6 @@
    form .gender-details input, .group-details input[type="radio"]{
      display: none;
    }
-
-   form .button{
-     height: 45px;
-     margin: 35px 0
-   }
-   form .button button{
-     height: 100%;
-     width: 100%;
-     border-radius: 5px;
-     border: none;
-     color: #fff;
-     font-size: 18px;
-     font-weight: 500;
-     letter-spacing: 1px;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     background: linear-gradient(135deg, #71b7e6, #9b59b6);
-   }
-   form .button button:hover{
-    transform: scale(0.99);
-    }
-
   /*multiple select*/
   .container{
     position: relative;
@@ -299,6 +281,28 @@
     border: 1.5px solid #c0c0c0;
     transition: all 0.3s ease-in-out;
 }
+/*Registre Button*/
+form .button{
+  height: 45px;
+  margin: 35px 0
+}
+form .button button{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button button:hover{
+ transform: scale(0.99);
+ }
+ /* media query */
 @media(max-width: 480px){
   .card{
    max-width: 100%;

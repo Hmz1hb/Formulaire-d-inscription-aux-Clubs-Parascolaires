@@ -1,22 +1,35 @@
-///button
-  document.getElementById("submit").addEventListener("click",function(){
-    NumVer();
-    selection();
-    Genval()
-    Classval()
-  })
 //text limits
 let inputBox = document.querySelector(".input-box"),
 textarea = inputBox.querySelector("input"),
 signalNum = inputBox.querySelector(".signal_num");
-
+ let validName = false;
 textarea.addEventListener("keyup", ()=>{
   let valLenght = textarea.value.length; //stored textarea value length into valLength
-
-  signalNum.innerText = valLenght; //converted signalNum innerText by valLength
+  let regex = /[0-9\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-]/g;
+ 
+signalNum.innerText = valLenght; //converted signalNum innerText by valLength
   (valLenght > 0) ? inputBox.classList.add("active") : inputBox.classList.remove("active"); // if valLength is greater than 0 than add active class if not than remove active class
   (valLenght > 30) ? inputBox.classList.add("error") : inputBox.classList.remove("error"); // if valLength is greater than 30 than add error class if not than remove error class
+  if (textarea.value.length >= 31 || textarea.value.length <3){
+    ver1 = false;
+    
+    textarea.style.borderColor = "red";
+    validName = false;
+  }
+  else if(textarea.value.match(regex)){
+    ver2 = false;
+    
+    textarea.style.borderColor = "red";
+    validName = false;
 
+  }
+  else {
+    ver1 = true;
+
+    textarea.style.borderColor = "green";
+    validName = true;
+    
+  }
   console.log(valLenght)
 });
 //email verification
@@ -32,16 +45,19 @@ textarea.addEventListener("keyup", ()=>{
       text.innerText = "Email can't be blank";
       eInput.style.borderColor = "red";
       text.style.color = "red";
+      validName = false;
     }else if (!eInput.value.match(pattern) ) { //if patter is not matched with user's enter value
       text.innerText = "Please enter a valid email";
       text.style.color = "red";
       eInput.style.borderColor = "red";
+      validName = false;
 
     }else{
       form.classList.replace("error" , "valid"); //replacing error class with valid class
       text.innerText = "This is a valid email";
       text.style.color = "white";
-      eInput.style.borderColor = "white";
+      eInput.style.borderColor = "green";
+      validName = true;
 
     }
   });
@@ -53,13 +69,15 @@ function NumVer()
     if( num.value.match(/(06)\d{8}$|(05)\d{8}$|(07)\d{8}$/) && num.value.match(/^[0-9]+$/) )
     {
         output.innerHTML="";
-        num.style.borderColor = "#9b59b6";
+        num.style.borderColor = "green";
+        validName = true;
     }
     else
     {
         output.innerHTML = 'Oops! your number is invalid';
         output.style.color= "red"
         num.style.borderColor = "red";
+        validName = false;
 
     }
 }
@@ -85,18 +103,20 @@ var sel = 0;
 var i;
 var output = document.getElementById("choice-out");
 
-for(i=0; ci<input.length; i++)
+for(i=0; i<input.length; i++)
 {
-    if(input[count].checked==true)
+    if(input[i].checked==true)
     {
         sel+= 1;
-        console.log(i)
+        console.log(i);
+        validName = true;
     }
 }
-if(sel > 3)
+if(sel > 3 || sel == 0)
 {
-    output.innerHTML='You can choose only 3 clubs';
+    output.innerHTML='Choose a club!!! Maximum 3 clubs';
     output.style.color= "red";
+    validName = false;
     return false;
 }
 }
@@ -111,19 +131,23 @@ function Genval()
     if(FirstDot.checked==true)
     {
         output.innerHTML="";
+        validName = true;
     }
     else if(SecondDot.checked==true)
     {
         output.innerHTML="";
+        validName = true;
     }
     else if(ThirdDot.checked==true)
     {
         output.innerHTML="";
+        validName = true;
     }
     else
     {
         output.innerHTML = 'What exactly are you ?';
         output.style.color= "red"
+        validName = false;
     }
 }
 /// Group selection
@@ -141,26 +165,54 @@ function Classval()
   if(DW101.checked==true)
   {
       output.innerHTML="";
+      validName = true;
   }
   else if(DW102.checked==true)
   {
       output.innerHTML="";
+      validName = true;
   }
   else if(DW103.checked==true)
   {
       output.innerHTML="";
+      validName = true;
   }
   else if(DM101.checked==true)
   {
     output.innerHTML="";
+    validName = true;
   }
   else if(DM102.checked==true)
   {
     output.innerHTML="";
+    validName = true;
+;
   }
   else
   {
       output.innerHTML = 'Choose at least one';
       output.style.color= "red";
+      validName = false;
   }
 }
+
+///button click
+MainBtn = document.getElementById("submit");
+
+MainBtn.addEventListener("click", verif )
+
+
+
+ function verif(e)
+ {
+  Genval()
+  Classval()
+  selection()
+  e.preventDefault();
+  console.log(validName )
+    if(validName == true)
+    {
+      window.location.href = "./thanks.html"; 
+    }
+ }
+ verif()
