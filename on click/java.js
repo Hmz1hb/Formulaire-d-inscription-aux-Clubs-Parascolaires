@@ -1,5 +1,10 @@
-  Genval()
-  Classval()
+///button
+  document.getElementById("submit").addEventListener("click",function(){
+    NumVer();
+    selection();
+    Genval()
+    Classval()
+  })
 //text limits
 let inputBox = document.querySelector(".input-box"),
 textarea = inputBox.querySelector("input"),
@@ -80,9 +85,9 @@ var sel = 0;
 var i;
 var output = document.getElementById("choice-out");
 
-for(i=0; i<input.length; i++)
+for(i=0; ci<input.length; i++)
 {
-    if(input[i].checked==true)
+    if(input[count].checked==true)
     {
         sel+= 1;
         console.log(i)
